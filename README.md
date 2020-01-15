@@ -38,4 +38,15 @@ Encapsulates the pure essence of pizza.
     - Terms of Use
     - Privacy Policy
 
+## Eyad's Deliverables Due: 01/19/20
+1. Create a header 
+    - fixed horizontal nav bar w/logo
+    - figure out nav bar tabs
+    - figure out color scheme/texture
+    - create a page for each tab
 
+2. Create a footer
+    - center logo in footer
+    - add links to all pages in nav bar?
+    - figure out color scheme/texture
+    - add facebook/yelp/google icon w/links to pages
