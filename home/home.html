@@ -5,7 +5,8 @@
     <title>Slice of Pie</title>
 
     <!-- Importing Templates -->
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="../JavaScript/w3data.js"></script>
+    <script src="../JavaScript/smooth-scroll.js"></script>
 
     <!-- Custom Styling -->
     <link rel="stylesheet" href="../styles/style.css" type="text/css">
@@ -21,14 +22,44 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Google API Reviews -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../JavaScript/google-places.js"></script>
+    <script src="../JavaScript/google-reviews.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyDZLCRr4WO_z4icRE4ArWKbE7hjGtHboJ8"></script>
+
+<!--
+    <script>
+        jQuery(document).ready(function() {
+            $("#google-reviews").googlePlaces({
+                placeId: '[PLACES_ID]',
+                render: ['reviews'],
+                min_rating: 1,
+                max_rows: 0
+            });
+        });
+    </script>
+-->
+
+
+
 </head>
 
 <body>
     <div w3-include-html="../templates/navbar.html"></div>
+
+    <div id="google-reviews">Hello</div>
+
     <div w3-include-html="../templates/footer.html"></div>
     <script>
         w3IncludeHTML();
     </script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
 </body>
 
 </html>
