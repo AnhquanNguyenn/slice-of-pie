@@ -260,6 +260,18 @@ body {
     clip-path: polygon(5% 0, 100% 0, 90% 100%, 0 100%);
 }
 
+/******** Team **********/ 
+.team-icons a {
+    color: #3b5998;
+    transition: all 1s ease-in-out;
+}
+
+.team-icons a:hover {
+    color: #242424;
+    transform: translateY(-5px);
+    
+}
+
 
 
 
