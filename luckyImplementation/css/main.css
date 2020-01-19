@@ -1,4 +1,5 @@
 /* white #c9c1ac*/
+
 .info {
     background: #c9c1ac;
 }
@@ -116,7 +117,7 @@ body {
 }
 
 @keyframes fromBottom {
-    0% {    
+    0% {
         transform: translateY(-10px);
     }
     50% {
@@ -128,10 +129,82 @@ body {
 }
 
 
+/*************** Navbar **********************/
+
+.navbar {
+    background: #c9c1ac;
+    padding: 20px 20px;
+    transition: all 1s ease;
+}
+
+.navbar-background {
+    padding: 5px 20px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    transition: all 1s ease;
+}
+
+.navbar-brand:hover {
+    color: #242424;
+}
+
+.nav-link {
+    color: #242424;
+    text-decoration: none;
+    transition: all 2s ease;
+    font-size: 23px;
+}
+
+.nav-link:hover {
+    color: #d3325f;
+}
+
+.nav-btn {
+    background: transparent;
+    color: #d3325f;
+    border: 2px solid #d3325f;
+    font-size: 23px;
+}
+
+.nav-btn:hover {
+    color: #242424;
+    border: 2px solid #242424;
+    transform: rotate(10deg);
+}
+
+.toggler-btn {
+    border: 2px solid #d3325f;
+    padding: 5px;
+    transition: all 2s ease;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: #d3325f;
+    transition: all 0.5s ease
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-5px, -8px);
+}
+
+
 /*************** Menu Items ******************/
+
 .item-container {
     position: relative;
-    
     /* For the link */
     overflow: hidden;
     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
@@ -176,7 +249,9 @@ body {
     outline-offset: 0.8rem;
 }
 
+
 /********* Menu ***********/
+
 #menu {
     background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/banner2.jpg)center/cover fixed no-repeat;
 }
@@ -195,7 +270,9 @@ body {
     padding: 0 0.4rem;
 }
 
+
 /********** About ***********/
+
 #about {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/banner3.jpg)center/cover fixed no-repeat;
 }
@@ -250,7 +327,9 @@ body {
     opacity: 0.5
 }
 
+
 /********** Reviews ***********/
+
 .review-img {
     width: 150px;
 }
@@ -260,7 +339,9 @@ body {
     clip-path: polygon(5% 0, 100% 0, 90% 100%, 0 100%);
 }
 
-/******** Team **********/ 
+
+/******** Team **********/
+
 .team-icons a {
     color: #3b5998;
     transition: all 1s ease-in-out;
@@ -269,36 +350,66 @@ body {
 .team-icons a:hover {
     color: #242424;
     transform: translateY(-5px);
-    
 }
 
 
+/****** Contact *******/
+
+.height-60 {
+    min-height: 60vh;
+}
+
+#contact .card {
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 2s ease;
+}
+
+#contact .card:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#contact .card-header {
+    color: #d3325f;
+}
+
+#contact .input-group-text {
+    background: #d3325f;
+    border-color: #d3325f;
+    color: #242424;
+}
+
+#contact .card input {
+    color: #606060;
+}
+
+#contact .card input::placeholder {
+    color: #606060;
+}
+
+.contact-btn {
+    color: #d3325f;
+    border-color: #d3325f;
+    background: transparent;
+    transition: all 2s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: #c9c1ac;
+    color: #d3325f;
+    border-color: #c9c1ac;
+}
 
 
+/******** Footer *********/
 
+#back-to-top {
+    background: #c9c1ac;
+    border-radius: 10px;
+    display: inline-block;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.scrollTop {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+}
