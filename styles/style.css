@@ -4,8 +4,14 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    box-shadow: -1px 5px 9px 0px rgba(0,0,0,0.75);
+    
 }
 
+
+.navbar-nav li a{
+    color: black;
+}
 .navbar-brand {
     margin:0;
     padding: 0;
@@ -14,13 +20,15 @@
 .logo{
     height: 50px;
     padding-right: 15px;
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 .navbar-title{
     color: white;
     font-family: monospace;
     font-size: 25px;
+   min-width: 13%;
+    
     
 }
 
@@ -33,13 +41,18 @@ a.navbar-ref:hover{
     color: white;
 }
 
+
 .navbar-nav li {
     padding: 0 10px;
+    
 }
 
 .navbar-nav li a {
     float: right;
     text-align: left;
+    color: black;
+ 
+    
 }
 
 #nav-bar ul li a:hover {
