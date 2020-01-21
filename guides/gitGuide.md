@@ -193,7 +193,9 @@ git push --set-upstream <remote> <branch>
 ```
 
 ## You want to revert your commits to like 3 commits ago, stuff doesn't work, but you do have some changes.
+```
 git stash
 git reset --hard <commit hash>
 git checkout -b <fix branch>
 git stash pop
+```
