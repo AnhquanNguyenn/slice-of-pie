@@ -31,9 +31,9 @@
 * Assuming you have no directory related to the project you're working on. You can download the master branch of a repo with the clone command. Simply do:
 ```
 git clone [url to Repo]
-
-For Example the slice-of-pie repository:
-
+```
+* For Example the slice-of-pie repository:
+```
 git clone https://github.com/AnhquanNguyenn/slice-of-pie.git
 ```
 
@@ -66,3 +66,41 @@ git branch
 ```
 git branch -a
 ```
+
+# To Delete a Branch in Your Repository
+* In the case you ever need to delete your branch:
+    * If you have merged your commits to master, and you no longer need your branch locally anymore.
+    * Rename
+    * Try not to delete branches though
+* Delete a branch on your local repository
+```
+git branch -d <branch_name>
+```
+* Now there may be some conflicts in deleting branch, for example an untracked commit, you are allowed to force the deletion
+```
+git branch -D <branch_name>
+```
+* You can also delete a branch on your remote repository, also highly not recommended.
+```
+git push origin :<branch_name>
+```
+
+# To Pull/Fetch Changes to Master or Your Local Branch
+**Note** Be Careful of using `git pull`, it is a permanent change to your local repository. Whatever you have in your repository will be overriden and it will be lost. 
+* This is why you should never make changes on your master branch. You should simply use master as a baseline to make changes, and to update the baseline.
+* Fetching is a much safer track record, since it does not do a merge.
+* In simpliest terms `git pull` does a `git fetch` and a `git merge` sequentially.
+* To update your remote-tracking branches to be representative of what is in your remote repository. 
+```
+git fetch
+```
+* Or you can specify which branch
+```
+git fetch <branch_name>
+```
+* To pull directly from a branch **Note** This is normally just done in the master branch.
+```
+git pull
+```
+
+
