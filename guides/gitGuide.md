@@ -4,6 +4,22 @@
 
 * This guide will include an explanation of what git is, of what useful commands you can use for git, and some example scenarios of how the whole process would take place.
 
+# Quick Links
+1. [What is Git and What is it Used For?](#What\ is\ Git\ and\ What\ is\ it\ Used\ For?)
+2. [What Happens From Local Machine to Remote Repository](#What\ Happens\ From\ Local\ Machine\ to\ Remote\ Repository)
+3. [How to Properly Use Git](#How\ to\ Properly\ Use\ Git)
+1. [To Clone A Repository](#To\ Clone\ A\ Repository)
+2. [To Create A Branch](#To\ Create\ A\ Branch)
+3. [To Switch To A Specified Branch](#To\ Switch\ To\ A\ Specified\ Branch)
+4. [To Show Branches in Your Repository](To\ Show\ Branches\ in\ Your\ Repository)
+5. [To Delete a Branch in Your Repository](#To\ Delete\ a\ Branch\ in\ Your\ Repository)
+6. [To Pull/Fetch Changes to Master or Your Local Branch](#To\ Pull/Fetch\ Changes\ to\ Master\ or\ Your\ Local\ Branch)
+7. [To Check the Differences Between your Local Branch And Your Incoming Changes](#To\ Check\ the\ Differences\ Between\ your\ Local\ Branch\ And\ Your\ Incoming\ Changes)
+8. [To Get The Commit Log of Your Branch](#To\ Get\ The\ Commit\ Log\ of\ Your\ Branch)
+9. [To Revert Commits](#To\ Revert\ Commits)
+10. [To Add and Commit Changes](#To\ Add\ and\ Commit\ Changes)
+11. [Example Scenarios](#Example\ Scenarios)
+
 # What is Git and What is it Used For?
 * Git is a version-control software system used for tracking changes in source code during the software development lifecycle. It is designed for coordinated non-linear work among programmers. 
 * It more simple terms, it is a way for people to incorporate changes within their local code so that it is up to date with everyone elses code. 
@@ -102,5 +118,82 @@ git fetch <branch_name>
 ```
 git pull
 ```
+* To pull a branch from a remote repository. The `--track` is similiar to `git checkout -b <remote_branch_name>`
+```
+git checkout --track origin/<branch_name>
+```
 
+# To Check the Differences Between your Local Branch And Your Incoming Changes
+* This is typically used for as a double check to make sure all your changes are what you want to add to your branch
+```
+git diff
+```
 
+# To Get The Commit Log of Your Branch
+* This is more for tracking purposes
+```
+git log
+```
+* You will pretty much need just to find the commit that you would want to see, and that has a commit hash identifier
+
+# To Revert Commits
+* Multiple ways of doing this
+* Reverting to your last commit 
+    * Finding the commit hash you can use `git log`
+```
+git revert <commit hash>
+```
+* To force a reset on a previous commit
+```
+git reset --hard <commit hash>
+```
+* Note these reverts are still considered changes, and you will need to add and commit them. It is preferable that you create a new branch to help resolve conflicts.
+
+# To Add and Commit Changes
+* Once you have already know you want changes and want to commit them to your local repository
+```
+git add .
+```
+or 
+```
+git add -A
+```
+or for a specific file
+```
+git add <file name>
+```
+* Then you just need to commit your additions to the repo
+```
+git commit -m "Commit Message"
+```
+* Alternatively you can do it all in one command, but it is still nice to see what changes you could
+```
+git commit -am "Message"
+```
+
+# Example Scenarios
+
+## You want to create a branch and make changes. You want to add those changes, commit them, and set an upstream to create your local branch as a branch in the remote repository
+```
+git checkout master
+git pull
+git checkout -b <branch_name>
+
+~Some source code changes
+~ Make sure you want those changes
+git diff 
+
+~ Scroll through and press 'q' when you're done
+
+"git add ." or "git add -A"
+git commit -m "Commit Message"
+
+~ You don't have the branch in the remote repository yet. Also just doing a git push, will output the command if you don't have the remote repository branch.
+git push --set-upstream <remote> <branch>
+```
+
+## You want to revert your commits to like 3 commits ago, stuff doesn't work, but you do have some changes.
+git stash
+git reset --hard <commit hash>
+git checkout -b <fix branch>
+git stash pop
