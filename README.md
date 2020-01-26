@@ -2,7 +2,7 @@
 Open Source Development for a website to help advertise and market the products and services provided by **Slice of Pie**.
 
 ## Description
-Encapsulates the pure essence of pizza.  
+Encapsulates the pure essence of pizza.
 
 ## Team Members
 | Member          | Role          |
@@ -12,6 +12,12 @@ Encapsulates the pure essence of pizza.
 | Carlos Alvarado | Developer     |
 | Tariq Muhanna   | Developer     |
 | Miguel Aguilar  | Spectator     |
+
+To Run a server locally, you can use
+```
+# Assuming Python 3
+python -m http.server <port_number>
+```
 
 ## Website Features
 1. Fixed Sidebar/Navbar
