@@ -5,13 +5,13 @@ Open Source Development for a website to help advertise and market the products 
 Encapsulates the pure essence of pizza.
 
 ## Team Members
-| Member          | Role          |
-| --------------- | ------------- | 
-| Eyad Alrrabbat  | Product Owner |
-| Anhquan Nguyen  | Developer     |
-| Carlos Alvarado | Developer     |
-| Tariq Muhanna   | Developer     |
-| Miguel Aguilar  | Spectator     |
+| Member          | Role                    |
+| --------------- | ----------------------- | 
+| Eyad Alrrabbat  | Product Owner/Developer |
+| Anhquan Nguyen  | Developer/Manager       |
+| Carlos Alvarado | Developer/Manager       |
+| Tariq Muhanna   | Developer               |
+| Miguel Aguilar  | Spectator               |
 
 To Run a server locally, you can use
 ```
