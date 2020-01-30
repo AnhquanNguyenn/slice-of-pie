@@ -19,6 +19,11 @@ To Run a server locally, you can use
 python -m http.server <port_number>
 ```
 
+To View the Webpage locally, in a mobile view. An easy way is to use Google Chrome Dev Tools
+1. Launch your local server for your webpage
+2. Right Click/Options Click -> Inspect
+3. Then click the Toggle Device Toolbar Option To switch views. It is located in the navbar. 
+
 ## Website Features
 1. Fixed Sidebar/Navbar
     - Store Location
